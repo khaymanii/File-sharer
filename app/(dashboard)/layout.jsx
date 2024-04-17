@@ -1,12 +1,13 @@
 import React from "react";
+import SideNav from "./_components/SideNav";
 
-function layout({ children }) {
+export default function layout({ children }) {
   return (
     <div>
-      <h1>home</h1>
-      {children}
+      <div className="h-full w-64 flex-col fixed inset-y-0 z-50">
+        <SideNav />
+      </div>
+      <div className="ml-64"> {children}</div>
     </div>
   );
 }
-
-export default layout;
