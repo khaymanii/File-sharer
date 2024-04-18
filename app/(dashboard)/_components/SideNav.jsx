@@ -28,15 +28,15 @@ function SideNav() {
     },
   ];
   return (
-    <div>
+    <div className="shadow-sm border-r h-full">
       <div className="p-5 border-b">
-        <Image src="/logo.svg" width={40} height={40} />
+        <Image src="/logo.svg" width={35} height={35} />
       </div>
       <div className="flex flex-col float-left w-full">
         {" "}
         {menuList.map((item, index) => (
           <button
-            className={`flex gap-2 p-4 px-0 hover:bg-gray-100 w-full text-gray-500 ${
+            className={`flex gap-2 p-4 px-6 hover:bg-gray-100 w-full text-gray-500 ${
               activeIndex == index ? "bg-blue-50 text-blue-700" : null
             }`}
             key={item.id}
